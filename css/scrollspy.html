@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Scrollspy</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange;
+}
+
+.Jobfair_links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 8rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.Jobfair_links .navbar {
+    height: 3rem;
+    flex-basis: 1250px;
+    background: #111;
+}
+
+.navbar .jogfair_link {
+    display: flex;
+    height: 100%;
+    list-style: none;
+}
+
+.jogfair_link li {
+    height: 100%;
+    width: calc(100% / 5);
+}
+
+.jogfair_link li:hover {
+    background: orangered;
+}
+
+.jogfair_link li.active {
+    background: orangered;
+}
+
+.jogfair_link li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contain_scrollspy {
+    width: 100%;
+    height: auto;
+}
+
+.scroll {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+}
+
+.scroll h1 {
+    color: silver;
+    font-size: 8rem;
+}
+
+
+</style>
+<body>
+
+    <section class="Jobfair_links">
+        <div class="navbar">
+            <ul class="jogfair_link">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </div>
+      </section>
+
+    <div class="container contain_scrollspy">
+        <section class="scroll" id="home">
+            <h1>Home</h1>
+        </section>
+
+        <section class="scroll" id="about">
+            <h1>About</h1>
+        </section>
+
+        <section class="scroll" id="services">
+            <h1>Services</h1>
+        </section>
+
+        <section class="scroll" id="contact">
+            <h1>Contact</h1>
+        </section>
+
+        <section class="scroll" id="feedback">
+            <h1>Feedback</h1>
+        </section>
+    </div>
+
+    <footer id="footer">
+        <p>Created By <a href="https://www.youtube.com/channel/UCr4TC9YxsDZwzwIxnZOVlBw">Front End Library</a> | &copy;
+            2021 All rights reserved.</p>
+    </footer>
+
+    <script src="scroll.js"></script>
+</body>
+
+</html>
